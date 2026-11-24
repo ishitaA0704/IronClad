@@ -109,9 +109,9 @@ AI agents need a hardware kill-switch. We're building it.
 
 def _write_demo_files():
     d = Path("demo_files"); d.mkdir(exist_ok=True)
-    (d / "passwords.pdf").write_text(PASSWORDS_PDF)
-    (d / "hackathon_budget.xlsx").write_text(HACKATHON_BUDGET)
-    (d / "notes.txt").write_text(NOTES_TXT)
+    (d / "passwords.pdf").write_text(PASSWORDS_PDF, encoding="utf-8")
+    (d / "hackathon_budget.xlsx").write_text(HACKATHON_BUDGET, encoding="utf-8")
+    (d / "notes.txt").write_text(NOTES_TXT, encoding="utf-8")
     log.info("Demo files (re)created in ./demo_files/")
 
 # ─────────────────── ECDSA P-256 Enclave ───────────────────
@@ -340,7 +340,7 @@ async def tool_list_files(args):
 async def tool_read_file(args):
     p = Path("demo_files")/Path(args.get("filename","")).name
     if not p.exists(): raise ValueError(f"File '{args.get('filename')}' not found")
-    return {"filename":args["filename"],"content":p.read_text(errors="replace")[:4000],"size":p.stat().st_size}
+    return {"filename":args["filename"],"content":p.read_text(encoding="utf-8", errors="replace")[:4000],"size":p.stat().st_size}
 
 async def tool_create_draft(args):
     return {"draft_id":f"draft_{uuid.uuid4().hex[:8]}","to":args.get("to",""),
