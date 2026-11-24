@@ -1,0 +1,11 @@
+Date,Category,Item,Amount,Approved
+2024-11-01,Travel,Hotel (3 nights),450.00,Yes
+2024-11-01,Travel,Flight tickets,320.00,Yes
+2024-11-02,Food,Team dinner,180.00,Yes
+2024-11-02,Equipment,Raspberry Pi 5,80.00,Yes
+2024-11-02,Equipment,ESP32 DevKit x3,45.00,Yes
+2024-11-03,Venue,Hackathon registration,120.00,Yes
+2024-11-03,Misc,Printing & supplies,35.00,Yes
+TOTAL,,,$1230.00,
+NOTE: Reimbursement deadline: Dec 1 2024
+Contact: finance@msrit.edu

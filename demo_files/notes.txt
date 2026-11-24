@@ -1,0 +1,33 @@
+# IronClad Hackathon Notes - Nov 2024
+
+## Project: IronClad - Blast-Radius MCP Security Proxy
+
+### Core Idea
+AI agents need a hardware kill-switch. We're building it.
+
+### Architecture
+- FastAPI proxy intercepts ALL MCP tool calls
+- Blast-radius engine classifies risk: GREEN / YELLOW / RED
+- ESP32 + fingerprint + OLED = physical interlock
+- Hash-chained SQLite = tamper-evident black box
+
+### Key Demo Flow
+1. Green: Read 5 trusted emails (silent, fast)
+2. Red: Poisoned invoice → attempted exfil → FROZEN
+3. Yellow: Bulk archive 15 emails (leash demo)
+4. Red: Delete passwords.pdf → Two-Hand Interlock
+
+### Team
+- Alice: Backend (FastAPI + crypto)
+- Bob: Hardware (ESP32 + R307)
+- Carol: Frontend (dashboard)
+
+### TODOs for Hack Day
+- [ ] Solder R307 to ESP32 DevKit
+- [ ] Flash firmware via USB-C
+- [ ] Test leash GPIO32 with physical button
+- [ ] Run --serial mode for real hardware
+
+### Sponsor Notes
+- ElevenLabs: Voice ID = 21m00Tcm4TlvDq8ikWAM (Rachel)
+- Gemini: Use for custom agent prompts
