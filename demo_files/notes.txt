@@ -18,9 +18,9 @@ AI agents need a hardware kill-switch. We're building it.
 4. Red: Delete passwords.pdf → Two-Hand Interlock
 
 ### Team
-- Alice: Backend (FastAPI + crypto)
-- Bob: Hardware (ESP32 + R307)
-- Carol: Frontend (dashboard)
+- Ishita + Sandeep: Backend (FastAPI + crypto)
+- Harshith + Sandeep: Hardware (ESP32 + R307)
+- Ishita: Frontend (dashboard)
 
 ### TODOs for Hack Day
 - [ ] Solder R307 to ESP32 DevKit
